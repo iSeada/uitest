@@ -1,0 +1,331 @@
+/*
+	Template name: UI form component.
+	Description: N/A.
+	Author: Ibrahim A. Seada.
+	Author URI: http://iSeada.com
+	Version: 1.0
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+:root {
+	--main-copy-color: #EB6282;
+	--accent-copy-color: #6E6E6E;
+	--main-gradient-color: linear-gradient(180deg, #EB6282 0%, #FA9090 99%);
+}
+
+body {
+	background: url(../img/main-bg.svg) #fff no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.9375rem;
+	font-weight: 700;
+	line-height: 1.375rem;
+	margin: 0;
+	color: #000;
+	text-align: center;
+	animation: fadein 2s;
+	-moz-animation: fadein 2s;
+	-webkit-animation: fadein 2s;
+	-o-animation: fadein 2s;
+}
+
+body.mobile-navigation_active {overflow: hidden;}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 0;
+	margin-bottom: 2.5rem;
+	border-bottom: 1px solid rgba(112, 112, 112, 0.20);
+}
+
+header .header__logo a {
+	display: block;
+	font-weight: 800;
+	color: var(--main-copy-color);
+}
+
+header .header__logo a:hover {
+	text-decoration: none;
+}
+
+.headline {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+
+.headline.headeline--main {
+	margin-bottom: 3rem;
+}
+
+.mobile-navigation input + label {
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+	z-index: 5;
+}
+
+.mobile-navigation input + label span:first-child {
+	top: 13px;
+}
+
+.mobile-navigation input + label span {
+	position: absolute;
+	top: 19px;
+	right: 10px;
+	background: #222;
+	width: 20px;
+	height: 2px;
+	display: block;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+.mobile-navigation input + label span:last-child {
+	top: 25px;
+}
+
+.mobile-navigation label:hover {
+	cursor: pointer;
+}
+
+.mobile-navigation input:checked + label span {
+	opacity: 0;
+	top: 50%;
+}
+
+.mobile-navigation input:checked + label span:first-child {
+	opacity: 1;
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.mobile-navigation input:checked + label span:last-child {
+	opacity: 1;
+	width: 20px;
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+
+.mobile-navigation input ~ .mobile-navigation__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	padding-top: 2.5rem;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
+	-webkit-transition: all .5s ease;
+		 -o-transition: all .5s ease;
+			transition: all .5s ease;
+}
+
+.mobile-navigation input ~ .mobile-navigation__container .main-nav-item {
+	text-align: center;
+	opacity: 0;
+	transition: .5s;
+	-webkit-transition-delay: 0s;
+	     -o-transition-delay: 0s;
+	        transition-delay: 0s;
+}
+
+.mobile-navigation input ~ .mobile-navigation__container .main-nav-item a {
+	position: relative;
+	display: block;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #222;
+	padding: 1.5rem;
+}
+
+.mobile-navigation input ~ .mobile-navigation__container .main-nav-item.active a::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	width: 1rem;
+	margin-left: -0.5rem;
+	height: 3px;
+	background: #222;
+	border-radius: 1.5px;
+}
+
+.mobile-navigation input ~ .mobile-navigation__container .main-nav-item a:hover {
+	text-decoration: none;
+}
+
+.mobile-navigation input:checked ~ .mobile-navigation__container {
+	visibility: visible;
+	background: #B4F1E1;
+	height: 100%;
+	-webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
+	-webkit-transition-delay: 0s;
+	     -o-transition-delay: 0s;
+	        transition-delay: 0s;
+}
+
+.mobile-navigation input:checked ~ .mobile-navigation__container .main-nav-item {
+	opacity: 1;
+	-webkit-transition-delay: .5s;
+	     -o-transition-delay: .5s;
+	        transition-delay: .5s;
+}
+
+/* forms */
+.home-form__group {
+	max-width: 265px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 2rem;
+}
+
+.home-form__control {
+	display: block;
+	height: 3rem;
+	width: 100%;
+	color: var(--accent-copy-color);
+	background-color: #EAEAEA;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0px 1.25rem;
+	border-radius: 13px;
+	border: none;
+}
+
+.home-form__select {
+	position: relative;
+}
+
+.home-form__select select::-ms-expand {
+	display: none;
+}
+
+.home-form__select:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	width: 10px;
+	height: 10px;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transform: translate(0, -8px) rotate(135deg);
+	transform: translate(0, -8px) rotate(135deg);
+	box-shadow: inset -2px 2px 0 0 var(--accent-copy-color);
+	border-radius: 0 0.5px 0 0;
+	pointer-events: none;
+}
+
+.home-form__select select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: none;
+	cursor: pointer;
+	-ms-word-break: normal;
+	word-break: normal;
+}
+
+.home-form__select select:focus {
+	outline: 0;
+}
+
+.headeline--secondary {
+	margin-bottom: 0.5rem;
+}
+
+.slick__home-style-carousel {
+	margin-bottom: 3rem;
+}
+
+.slick__home-style-carousel .slick-slide {
+	opacity: 0.2;
+}
+
+.slick__home-style-carousel .slick-slide.slick-active {
+	opacity: 1;
+}
+
+.slick__home-style-carousel img {
+	margin: 1.25rem auto 0 auto;
+	max-height: 190px;
+}
+
+.button--state-submit {
+	background: var(--main-gradient-color);
+	font-size: 1.125rem;
+	color: #fff;
+}
+
+/* animation */
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-moz-keyframes fadein {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes fadein {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+}
+@-o-keyframes fadein {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes fadein {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes fadein {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+}
+@-o-keyframes fadein {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+
+}
+
+
+/* Large devices (desktops, 992px and below) */
+@media (max-width: 992px) {
+
+}
+
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+
+}
+
+/* Small devices (landscape phones, 576px and below) */
+@media (min-width: 576px) {
+
+}

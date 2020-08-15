@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="1040" viewBox="0 0 375 1040">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.159" x2="0.5" y2="0.883" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b4f1e1"/>
+      <stop offset="1" stop-color="#ffe9c5"/>
+    </linearGradient>
+    <clipPath id="clip-iPhone_X_XS_11_Pro_1">
+      <rect width="375" height="1040"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_X_XS_11_Pro_1" data-name="iPhone X, XS, 11 Pro – 1" clip-path="url(#clip-iPhone_X_XS_11_Pro_1)">
+    <rect width="375" height="1040" fill="#fff"/>
+    <path id="Path_14" data-name="Path 14" d="M1220.027-161.953C1119.61-80.185,895.822-38.583,847.048,114.912c-26.435,83.194-5.466,267.724-164.969,359.713C498.727,574.864,471.02,659.211,471.02,659.211l1023.853,61.937L1893.479-88.925l-446.8-387.192s-332.812-94.679-256.782,37.3S1320.445-243.722,1220.027-161.953Z" transform="matrix(0.978, -0.208, 0.208, 0.978, -803.046, 692.995)" fill="url(#linear-gradient)"/>
+    <text id="Modern" transform="translate(375 658)" font-size="20" font-family="Montserrat-Bold, Montserrat" font-weight="700" opacity="0"><tspan x="-39.71" y="0">Modern</tspan></text>
+  </g>
+</svg>

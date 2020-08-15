@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://iseada.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>UI component</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css?v=1">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1">
+    <link rel="stylesheet" href="assets/css/slick.css?v=1">
+
+    <!-- FAV & Touch Icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icons/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="assets/img/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="assets/img/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="assets/img/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="assets/img/icons/apple-touch-icon-144x144.png">
+  </head>
+  <body>
+    <div class="container" id="main-wrap">
+        <header>
+            <div class="header__logo">
+                <h1><a href="#">Ziri</a></h1>
+            </div><!-- end logo -->
+            <div class="mobile-navigation">
+                <input id="mobile-navigation__icon" class="hidden" type="checkbox">
+                <label for="mobile-navigation__icon">
+                    <span></span><span></span><span></span>
+                </label>
+                <div class="mobile-navigation__container">
+                    <div class="main-nav-item"><a href="#">Find your home</a></div>
+                    <div class="main-nav-item"><a href="#">Sell your home</a></div>
+                    <div class="main-nav-item"><a href="#">My account</a></div>
+                </div><!-- end mobile container -->
+            </div><!-- end mobile navigation -->
+        </header><!-- end header tag -->
+        <h1 class="headline headeline--main">Looking for a home?<br>You are in the right place.</h1>
+        <section>
+            <form action="" class="home-form" id="home-form" method="get">
+                <div class="home-form__group">
+                    <input type="text" class="home-form__control" id="name" placeholder="What is your name?">
+                </div>
+                <div class="home-form__group">
+                    <input type="email" class="home-form__control" id="email" placeholder="What is your email?">
+                </div>
+                <div class="home-form__group">
+                    <input type="password" class="home-form__control" id="password" placeholder="Create a password.">
+                </div>
+                <div class="home-form__group home-form__select">
+                    <select class="home-form__control" name="bedrooms" id="bedrooms">
+                        <option value="0">How many bedrooms?</option>
+                        <option value="1">1 Bedroom</option>
+                        <option value="2">2 Bedrooms</option>
+                        <option value="3">3 Bedrooms</option>
+                        <option value="4">4 Bedrooms</option>
+                        <option value="5">5 Bedrooms</option>
+                    </select>
+                </div>
+                <div class="home-form__group home-form__select">
+                    <select class="home-form__control" name="bathrooms" id="bathrooms">
+                        <option value="0">How many bathrooms?</option>
+                        <option value="1">1 Bathroom</option>
+                        <option value="2">2 Bathrooms</option>
+                        <option value="3">3 Bathrooms</option>
+                        <option value="4">4 Bathrooms</option>
+                        <option value="5">5 Bathrooms</option>
+                    </select>
+                </div>
+                <h3 class="headline headeline--secondary">Choose your style.</h3>
+                <div class="slick slick__home-style-carousel">
+                    <div class="item home-style-carousel__type">
+                        <h3 class="headline headeline--secondary">Traditional</h3>
+                        <img src="assets/img/home-icon-1.png" alt="">
+                    </div><!-- end slide/1 -->
+                    <div class="item home-style-carousel__type">
+                        <h3 class="headline headeline--secondary">Modern</h3>
+                        <img src="assets/img/home-icon-2.png" alt="">
+                    </div><!-- end slide/2 -->
+                    <div class="item home-style-carousel__type">
+                        <h3 class="headline headeline--secondary">Ranch</h3>
+                        <img src="assets/img/home-icon-3.png" alt="">
+                    </div><!-- end slide/3 -->
+                </div><!-- end home style carousel -->
+                <div class="home-form__group">
+                    <input type="submit" name="submit" id="submit" class="home-form__control button--state-submit" value="Find your home!">
+                </div>
+            </form><!-- end form -->
+        </section><!-- end section -->
+    </div><!-- end main wrap -->
+    <!-- JavaScript -->
+    <script src="assets/js/jquery-3.5.1.min.js?v=1"></script>
+    <script src="assets/js/slick.min.js?v=1"></script>
+    <script src="assets/js/scripts.js?v=1"></script>
+  </body>
+</html>
